@@ -60,33 +60,20 @@
                 ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
                 ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
             ]
-        
-        
-        let dump = "";
         // Code kamu di sini, lakukan looping terhadap input di atas
-        for(let i = 0; i < input.length; i++){
-            for(let j = 0; j < input[i].length; j++){
-                // dump += input[i][j] + "<br>";
-                if(j === 0){
-                    dump += "Nomor ID : " + input[i][j] + "<br>";
-                }
-                if(j === 1){
-                    dump += "Nama Lengkap : " + input[i][j] + "<br>";
-                }
-                if(j === 2){
-                    dump += "TTL : " + input[i][j] + " ";
-                }
-                if(j === 3){
-                    dump += input[i][j] + "<br>";
-                }
-                if(j === 4){
-                    dump += "Hobi: " + input[i][j] + "<br>";
-                }
+        function dataHandling(input){
+            let dump = "";
+            for(let i = 0; i < input.length; i++){
+                dump += ` Nomor ID: ${input[i][0]} <br>
+                          Nama Lenkap: ${input[i][1]} <br>
+                          TTL: ${input[i][2]} ${input[i][3]} <br>
+                          Hobi: ${input[i][4]} <br><br>`;
             }
-            dump += "<br>";
+            return dump;
         }
+        
 
-        var jawaban1 = dump;// =  Isikan outputnya di sini
+        var jawaban1 = dataHandling(input);// =  Isikan outputnya di sini
 
         document.getElementById("jawaban1").innerHTML = jawaban1; 
 
